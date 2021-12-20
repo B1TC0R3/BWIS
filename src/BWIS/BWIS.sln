@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BWIS.Gui", "BWIS.Gui\BWIS.G
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BWIS.Storage", "BWIS.Driver\BWIS.Storage.csproj", "{EB1D2A7A-AB1B-46CC-855A-3FCED00F8571}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BWIS.Test", "BWIS.Test\BWIS.Test.csproj", "{CA6225E0-56FF-47FE-8223-E1A70DDA4E5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EB1D2A7A-AB1B-46CC-855A-3FCED00F8571}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB1D2A7A-AB1B-46CC-855A-3FCED00F8571}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB1D2A7A-AB1B-46CC-855A-3FCED00F8571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA6225E0-56FF-47FE-8223-E1A70DDA4E5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA6225E0-56FF-47FE-8223-E1A70DDA4E5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA6225E0-56FF-47FE-8223-E1A70DDA4E5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA6225E0-56FF-47FE-8223-E1A70DDA4E5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
