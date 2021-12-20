@@ -7,8 +7,8 @@
     <ProjectGuid>{EB1D2A7A-AB1B-46CC-855A-3FCED00F8571}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BWIS.Driver</RootNamespace>
-    <AssemblyName>BWIS.Driver</AssemblyName>
+    <RootNamespace>BWIS.Storage</RootNamespace>
+    <AssemblyName>BWIS.Storage</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
