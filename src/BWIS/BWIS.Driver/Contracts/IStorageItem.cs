@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BWIS.Driver.Contracts
 {
-    internal interface IStorageItem
+    public interface IStorageItem
     {
     }
 }
