@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BWIS.Gui", "BWIS.Gui\BWIS.Gui.csproj", "{D1AE0CF5-8C22-4E34-BB53-D38D27F8C417}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BWIS.Storage", "BWIS.Driver\BWIS.Storage.csproj", "{EB1D2A7A-AB1B-46CC-855A-3FCED00F8571}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1AE0CF5-8C22-4E34-BB53-D38D27F8C417}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1AE0CF5-8C22-4E34-BB53-D38D27F8C417}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1AE0CF5-8C22-4E34-BB53-D38D27F8C417}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1AE0CF5-8C22-4E34-BB53-D38D27F8C417}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB1D2A7A-AB1B-46CC-855A-3FCED00F8571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB1D2A7A-AB1B-46CC-855A-3FCED00F8571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB1D2A7A-AB1B-46CC-855A-3FCED00F8571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB1D2A7A-AB1B-46CC-855A-3FCED00F8571}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8196E2CD-189E-4225-9F06-7307CB4DAAC8}
+	EndGlobalSection
+EndGlobal
