@@ -9,16 +9,23 @@ namespace BWIS.Store.Logic
 {
     public class StorageItem : IStorageItem
     {
-        public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Storage { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Unit { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Ammount { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int AmmountToReorder { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime ExpirationDate { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public double Price { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public double CombinedValue { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Storage { get; set; }
+        public string Unit { get; set; }
+        public int Id { get; set; }
+        public int Ammount { get; set; }
+        public int AmmountToReorder { get; set; }
+        public DateTime ExpirationDate { get; set; }
+        public double Price { get; set; }
+        public double CombinedValue 
+        { 
+            get 
+            {
+                double combinedValue = Price * Ammount;
+                return Math.Round(combinedValue, 2);    
+            }
+        }
 
         public void Add(IStorageItem item)
         {

@@ -7,13 +7,13 @@ using Xunit;
 
 namespace BWIS.Test.Store.Contracts
 {
-    public class IStorageItem
+    public class IStorageItemTest
     {
         [Fact]
         public static void CanBeReferenced()
         {
             //arrange
-            IStorageItem? storage = null;
+            IStorageItemTest? storage = null;
 
             //act
 

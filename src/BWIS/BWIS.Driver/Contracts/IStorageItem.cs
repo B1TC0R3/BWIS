@@ -17,7 +17,7 @@ namespace BWIS.Store.Contracts
         int AmmountToReorder { get; set; }
         DateTime ExpirationDate { get; set; }
         double Price { get; set; }
-        double CombinedValue { get; set; }
+        double CombinedValue { get; }
 
         void Add(IStorageItem item);
     }
