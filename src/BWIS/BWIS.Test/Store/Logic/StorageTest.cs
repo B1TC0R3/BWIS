@@ -22,7 +22,7 @@ namespace BWIS.Test.Store.Logic
                 //act
                 var exception = Record.Exception(() => 
                 {
-                    storage.Add(new StorageItem());
+                    storage.Add(new StorageContainer());
                 });
 
                 //assert
@@ -73,7 +73,7 @@ namespace BWIS.Test.Store.Logic
                 //act
                 var exception = Record.Exception(() =>
                 {
-                    storage.Remove(new StorageItem());
+                    storage.Remove(new StorageContainer());
                 });
 
                 //assert
@@ -92,7 +92,7 @@ namespace BWIS.Test.Store.Logic
                 //act
                 var exception = Record.Exception(() =>
                 {
-                    storage.Replace(0, new StorageItem());
+                    storage.Replace(0, new StorageContainer());
                 });
 
                 //assert
@@ -108,7 +108,7 @@ namespace BWIS.Test.Store.Logic
                 //act
                 var exception = Record.Exception(() =>
                 {
-                    storage.Replace("", new StorageItem());
+                    storage.Replace("", new StorageContainer());
                 });
 
                 //assert

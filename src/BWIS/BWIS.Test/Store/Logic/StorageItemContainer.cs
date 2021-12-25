@@ -9,18 +9,18 @@ using Xunit;
 
 namespace BWIS.Test.Store.Logic
 {
-    public static class StorageItemTest
+    public static class StorageItemContainer
     {
         [Fact]
         public static void IsImplemented() 
         {
             //arrange
-            IStorageItem item;
+            IStorageContainer item;
 
             //act
             var exception = Record.Exception(() => 
             {
-                item = new StorageItem();
+                item = new StorageContainer();
             });
 
             //assert
@@ -33,7 +33,7 @@ namespace BWIS.Test.Store.Logic
             public static void IsImplemented() 
             {
                 //arrange
-                IStorageItem item = new StorageItem();
+                IStorageContainer item = new StorageContainer();
 
                 //act
                 var exception = Record.Exception(() => 
@@ -49,7 +49,7 @@ namespace BWIS.Test.Store.Logic
             public static void GetsCorrectValue_WhenExpectedValuesAreSet()
             {
                 //arrange
-                IStorageItem item = new StorageItem();
+                IStorageContainer item = new StorageContainer();
                 item.Price = 2.50;
                 item.Ammount = 3;
 
@@ -66,7 +66,7 @@ namespace BWIS.Test.Store.Logic
             public static void GetsCorrectValue_WhenAmmountIsZero()
             {
                 //arrange
-                IStorageItem item = new StorageItem();
+                IStorageContainer item = new StorageContainer();
                 item.Price = 2.50;
                 item.Ammount = 0;
 
@@ -83,7 +83,7 @@ namespace BWIS.Test.Store.Logic
             public static void GetsCorrectValue_WhenPriceIsZero()
             {
                 //arrange
-                IStorageItem item = new StorageItem();
+                IStorageContainer item = new StorageContainer();
                 item.Price = 0;
                 item.Ammount = 3;
 
@@ -103,12 +103,12 @@ namespace BWIS.Test.Store.Logic
             public static void IsImplementedWithId() 
             {
                 //arrange
-                IStorageItem item = new StorageItem();
+                IStorageContainer item = new StorageContainer();
 
                 //act
                 var exception = Record.Exception(() => 
                 {
-                    item.Add(new StorageItem());
+                    item.Add(new StorageContainer());
                 });
 
                 //assert
@@ -122,7 +122,7 @@ namespace BWIS.Test.Store.Logic
             public static void IsImplementedWithId() 
             {
                 //arrange
-                IStorageItem item = new StorageItem();
+                IStorageContainer item = new StorageContainer();
 
                 //act
                 var exception = Record.Exception(() => 
@@ -138,7 +138,7 @@ namespace BWIS.Test.Store.Logic
             public static void IsImplementedWithName()
             {
                 //arrange
-                IStorageItem item = new StorageItem();
+                IStorageContainer item = new StorageContainer();
 
                 //act
                 var exception = Record.Exception(() =>

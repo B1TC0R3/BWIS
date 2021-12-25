@@ -9,7 +9,7 @@ namespace BWIS.Store.Logic
 {
     public class Storage : IStorage
     {
-        public void Add(IStorageItem item)
+        public void Add(IStorageContainer item)
         {
             throw new NotImplementedException();
         }
@@ -19,7 +19,7 @@ namespace BWIS.Store.Logic
             throw new NotImplementedException();
         }
 
-        public void Remove(IStorageItem item)
+        public void Remove(IStorageContainer item)
         {
             throw new NotImplementedException();
         }
@@ -29,12 +29,12 @@ namespace BWIS.Store.Logic
             throw new NotImplementedException();
         }
 
-        public void Replace(int id, IStorageItem newItem)
+        public void Replace(int id, IStorageContainer newItem)
         {
             throw new NotImplementedException();
         }
 
-        public void Replace(string name, IStorageItem newItem)
+        public void Replace(string name, IStorageContainer newItem)
         {
             throw new NotImplementedException();
         }

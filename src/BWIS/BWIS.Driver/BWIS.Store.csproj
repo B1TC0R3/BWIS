@@ -42,9 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IStorage.cs" />
-    <Compile Include="Contracts\IStorageItem.cs" />
+    <Compile Include="Contracts\IStorageContainer.cs" />
+    <Compile Include="Logic\Specialized\Cabinet.cs" />
+    <Compile Include="Logic\Specialized\Crate.cs" />
+    <Compile Include="Logic\Specialized\Item.cs" />
+    <Compile Include="Logic\Specialized\Section.cs" />
+    <Compile Include="Logic\Specialized\SpecializedStorage.cs" />
     <Compile Include="Logic\Storage.cs" />
-    <Compile Include="Logic\StorageItem.cs" />
+    <Compile Include="Logic\StorageContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

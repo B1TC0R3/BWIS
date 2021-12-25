@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BWIS.Store.Contracts
 {
-    public interface IStorageItem
+    public interface IStorageContainer
     {
         string Name { get; set; }
         string Description { get; set; }
@@ -19,10 +19,10 @@ namespace BWIS.Store.Contracts
         double Price { get; set; }
         double CombinedValue { get; }
 
-        void Add(IStorageItem item);
+        void Add(IStorageContainer item);
 
-        IStorageItem Get(int id);
-        IStorageItem Get(string name);
+        IStorageContainer Get(int id);
+        IStorageContainer Get(string name);
 
     }
 }
