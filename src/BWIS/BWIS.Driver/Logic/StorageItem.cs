@@ -9,6 +9,7 @@ namespace BWIS.Store.Logic
 {
     public class StorageItem : IStorageItem
     {
+        internal List<IStorageItem> StorageItems { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Storage { get; set; }
