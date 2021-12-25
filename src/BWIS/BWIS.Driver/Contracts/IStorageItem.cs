@@ -20,5 +20,9 @@ namespace BWIS.Store.Contracts
         double CombinedValue { get; }
 
         void Add(IStorageItem item);
+
+        IStorageItem Get(int id);
+        IStorageItem Get(string name);
+
     }
 }

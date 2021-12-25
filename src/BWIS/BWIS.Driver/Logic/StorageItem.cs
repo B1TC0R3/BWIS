@@ -31,5 +31,15 @@ namespace BWIS.Store.Logic
         {
             throw new NotImplementedException();
         }
+
+        public IStorageItem Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IStorageItem Get(string name)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

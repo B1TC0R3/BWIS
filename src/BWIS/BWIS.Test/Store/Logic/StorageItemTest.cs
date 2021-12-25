@@ -111,7 +111,26 @@ namespace BWIS.Test.Store.Logic
                 });
 
                 //assert
-                Assert.Null(exception);
+                Assert.IsNotType<NotImplementedException>(exception);
+            }
+        }
+
+        public static class Get 
+        {
+            [Fact]
+            public static void IsImplementedWithId() 
+            {
+                //arrange
+                IStorageItem item = new StorageItem();
+
+                //act
+                var exception = Record.Exception(() => 
+                {
+                    item.Get(0);
+                });
+
+                //assert
+                Assert.IsNotType<NotImplementedException>(exception);
             }
         }
     }
