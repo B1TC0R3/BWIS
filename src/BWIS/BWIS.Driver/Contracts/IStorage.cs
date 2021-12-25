@@ -8,5 +8,16 @@ namespace BWIS.Storage.Contracts
 {
     public interface IStorage
     {
+        void Add(IStorageItem item);
+
+        void Remove(int id);
+
+        void Remove(IStorageItem item);
+
+        void Remove(string name);
+
+        void Replace(int id, IStorageItem newItem);
+
+        void Replace(string name, IStorageItem newItem);
     }
 }
