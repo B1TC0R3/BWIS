@@ -42,7 +42,7 @@ namespace BWIS.Test.Store.Logic
                 });
 
                 //assert
-                Assert.Null(exception);
+                Assert.IsNotType<NotImplementedException>(exception);
             }
 
             [Fact]
@@ -96,6 +96,7 @@ namespace BWIS.Test.Store.Logic
                 Assert.Equal(expectation, result);
             }
         }
+        
         public static class Add 
         {
             [Fact]
