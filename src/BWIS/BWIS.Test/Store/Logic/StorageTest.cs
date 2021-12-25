@@ -26,7 +26,7 @@ namespace BWIS.Test.Store.Logic
                 });
 
                 //assert
-                Assert.Null(exception);
+                Assert.IsNotType<NotImplementedException>(exception);
             }
         }
 
@@ -45,7 +45,7 @@ namespace BWIS.Test.Store.Logic
                 });
 
                 //assert
-                Assert.Null(exception);
+                Assert.IsNotType<NotImplementedException>(exception);
             }
 
             [Fact]
@@ -61,7 +61,7 @@ namespace BWIS.Test.Store.Logic
                 });
 
                 //assert
-                Assert.Null(exception);
+                Assert.IsNotType<NotImplementedException>(exception);
             }
 
             [Fact]
@@ -77,7 +77,7 @@ namespace BWIS.Test.Store.Logic
                 });
 
                 //assert
-                Assert.Null(exception);
+                Assert.IsNotType<NotImplementedException>(exception);
             }
         }
 
@@ -96,7 +96,7 @@ namespace BWIS.Test.Store.Logic
                 });
 
                 //assert
-                Assert.Null(exception);
+                Assert.IsNotType<NotImplementedException>(exception);
             }
 
             [Fact]
@@ -112,7 +112,7 @@ namespace BWIS.Test.Store.Logic
                 });
 
                 //assert
-                Assert.Null(exception);
+                Assert.IsNotType<NotImplementedException>(exception);
             }
         }
     }
