@@ -1,4 +1,4 @@
-﻿using BWIS.Storage.Contracts;
+﻿using BWIS.Store.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;

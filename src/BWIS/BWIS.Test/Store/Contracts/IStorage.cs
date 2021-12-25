@@ -5,20 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace BWIS.Test.Storage.Contracts
+//TEST CLASS
+
+namespace BWIS.Test.Store.Contracts
 {
-    public class IStorageItem
+    public class IStorage
     {
         [Fact]
-        public static void CanBeReferenced()
+        public static void CanBeReferenced() 
         {
             //arrange
-            IStorageItem? storage = null;
+            IStorage? storage = null;
 
             //act
 
             //assert
-            Assert.Null(storage);
+            Assert.Null(storage);  
         }
     }
 }

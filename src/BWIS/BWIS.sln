@@ -5,9 +5,9 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BWIS.Gui", "BWIS.Gui\BWIS.Gui.csproj", "{D1AE0CF5-8C22-4E34-BB53-D38D27F8C417}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BWIS.Storage", "BWIS.Driver\BWIS.Storage.csproj", "{EB1D2A7A-AB1B-46CC-855A-3FCED00F8571}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BWIS.Store", "BWIS.Driver\BWIS.Store.csproj", "{EB1D2A7A-AB1B-46CC-855A-3FCED00F8571}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BWIS.Test", "BWIS.Test\BWIS.Test.csproj", "{CA6225E0-56FF-47FE-8223-E1A70DDA4E5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BWIS.Test", "BWIS.Test\BWIS.Test.csproj", "{CA6225E0-56FF-47FE-8223-E1A70DDA4E5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
