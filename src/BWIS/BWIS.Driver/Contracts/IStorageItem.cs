@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BWIS.Storage.Contracts
+namespace BWIS.Store.Contracts
 {
     public interface IStorageItem
     {

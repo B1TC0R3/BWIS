@@ -43,10 +43,9 @@
   <ItemGroup>
     <Compile Include="Contracts\IStorage.cs" />
     <Compile Include="Contracts\IStorageItem.cs" />
+    <Compile Include="Logic\Storage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Logic\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

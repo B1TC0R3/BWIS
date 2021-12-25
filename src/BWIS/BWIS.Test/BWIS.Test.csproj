@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BWIS.Driver\BWIS.Storage.csproj" />
+    <ProjectReference Include="..\BWIS.Driver\BWIS.Store.csproj" />
     <ProjectReference Include="..\BWIS.Gui\BWIS.Gui.csproj" />
   </ItemGroup>
 

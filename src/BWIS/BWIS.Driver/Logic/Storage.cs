@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BWIS.Storage.Logic
+namespace BWIS.Store.Logic
 {
-    internal class Storage : IStorage
+    public class Storage : IStorage
     {
         public void Add(IStorageItem item)
         {
