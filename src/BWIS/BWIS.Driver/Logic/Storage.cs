@@ -10,10 +10,15 @@ namespace BWIS.Store.Logic
 {
     public class Storage : IStorage
     {
-        private readonly List<IStorageContainer> cabinets = new List<IStorageContainer>();
+        private readonly List<IStorageContainer> cabinets;
+
+        public string Name { get; set; }
 
         public Storage(string name = "Unnamed Storage") 
-        { }
+        {
+            Name = name;
+            cabinets = new List<IStorageContainer>();
+        }
 
         public void Add(string name = "-Unnamed-",
                         string description = "-/-",

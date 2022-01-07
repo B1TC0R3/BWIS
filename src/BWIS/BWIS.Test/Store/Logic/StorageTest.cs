@@ -23,11 +23,139 @@ namespace BWIS.Test.Store.Logic
                 //act
                 var exception = Record.Exception(() => 
                 {
-                    storage.Add(new Cabinet(), "");
+                    storage.Add();
                 });
 
                 //assert
                 Assert.IsNotType<NotImplementedException>(exception);
+            }
+
+            [Fact]
+            public static void ThrowsArgumentException_WhenNameIsNull()
+            {
+                //arrange
+                IStorage storage = new Storage();
+
+                //act
+                Action action = new (() =>
+                {
+                    storage.Add(name: null);
+                });
+
+                //assert
+                Assert.Throws<ArgumentException>(action);
+            }
+
+            [Fact]
+            public static void ThrowsArgumentException_WhenNameIsEmpty()
+            {
+                //arrange
+                IStorage storage = new Storage();
+
+                //act
+                Action action = new(() =>
+                {
+                    storage.Add(name: "");
+                });
+
+                //assert
+                Assert.Throws<ArgumentException>(action);
+            }
+
+            [Fact]
+            public static void ThrowsArgumentException_WhenDescriptionIsNull()
+            {
+                //arrange
+                IStorage storage = new Storage();
+
+                //act
+                Action action = new(() =>
+                {
+                    storage.Add(description: null);
+                });
+
+                //assert
+                Assert.Throws<ArgumentException>(action);
+            }
+
+            [Fact]
+            public static void ThrowsArgumentException_WhenDescriptionIsEmpty()
+            {
+                //arrange
+                IStorage storage = new Storage();
+
+                //act
+                Action action = new(() =>
+                {
+                    storage.Add(description: "");
+                });
+
+                //assert
+                Assert.Throws<ArgumentException>(action);
+            }
+
+            [Fact]
+            public static void ThrowsArgumentException_WhenStorageIsNull()
+            {
+                //arrange
+                IStorage storage = new Storage();
+
+                //act
+                Action action = new(() =>
+                {
+                    storage.Add(storage: null);
+                });
+
+                //assert
+                Assert.Throws<ArgumentException>(action);
+            }
+
+            [Fact]
+            public static void ThrowsArgumentException_WhenStorageIsEmpty()
+            {
+                //arrange
+                IStorage storage = new Storage();
+
+                //act
+                Action action = new(() =>
+                {
+                    storage.Add(storage: "");
+                });
+
+                //assert
+                Assert.Throws<ArgumentException>(action);
+            }
+
+            [Fact]
+            public static void ThrowsArgumentException_WhenUnitIsNull()
+            {
+                //arrange
+                IStorage storage = new Storage();
+
+                //act
+                Action action = new(() =>
+                {
+                    storage.Add(unit: null);
+                });
+
+                //assert
+                Assert.Throws<ArgumentException>(action);
+            }
+
+            [Fact]
+            public static void ThrowsArgumentException_WhenUnitIsEmpty()
+            {
+                //arrange
+                IStorage storage = new Storage();
+
+                //act
+                Action action = new(() =>
+                {
+                    storage.Add(unit: "");
+                });
+
+                //assert
+                Assert.Throws<ArgumentException>(action);
             }
         }
 
