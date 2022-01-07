@@ -1,4 +1,5 @@
 ﻿using BWIS.Store.Contracts;
+using BWIS.Store.Logic.Specialized;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,18 @@ namespace BWIS.Store.Logic
 {
     public class Storage : IStorage
     {
-        public void Add(IStorageContainer item)
+        private List<IStorageContainer> cabinets;
+
+        public void Add(IStorageContainer item, string directory)
         {
-            throw new NotImplementedException();
+            if (item is Cabinet)
+            {
+                cabinets.Add(item);
+            }
+            else 
+            {
+                throw new NotImplementedException();
+            }
         }
 
         public void Remove(int id)

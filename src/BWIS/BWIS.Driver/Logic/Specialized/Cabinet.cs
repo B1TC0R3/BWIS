@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace BWIS.Store.Logic.Specialized
 {
-    public class Cabinet
+    public class Cabinet : StorageContainer
     {
-        public Cabinet() 
-        {
-            throw new NotImplementedException();
-        }
+        public Cabinet(string name = "-Unnamed-", string description = "-/-", string storage = "-/-", string unit = "-/-", ) { }
     }
 }

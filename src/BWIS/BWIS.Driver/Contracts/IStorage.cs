@@ -8,7 +8,7 @@ namespace BWIS.Store.Contracts
 {
     public interface IStorage
     {
-        void Add(IStorageContainer item);
+        void Add(IStorageContainer item, string directory);
 
         void Remove(int id);
 

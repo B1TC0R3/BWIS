@@ -47,7 +47,6 @@
     <Compile Include="Logic\Specialized\Crate.cs" />
     <Compile Include="Logic\Specialized\Item.cs" />
     <Compile Include="Logic\Specialized\Section.cs" />
-    <Compile Include="Logic\Specialized\SpecializedStorage.cs" />
     <Compile Include="Logic\Storage.cs" />
     <Compile Include="Logic\StorageContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

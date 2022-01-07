@@ -12,7 +12,7 @@ namespace BWIS.Store.Contracts
         string Description { get; set; }
         string Storage { get; set; }
         string Unit { get; set; }
-        int Id { get; set; }
+        string Id { get; }
         int Ammount { get; set; }
         int AmmountToReorder { get; set; }
         DateTime ExpirationDate { get; set; }

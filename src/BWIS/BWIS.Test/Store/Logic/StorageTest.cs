@@ -22,7 +22,7 @@ namespace BWIS.Test.Store.Logic
                 //act
                 var exception = Record.Exception(() => 
                 {
-                    storage.Add(new StorageContainer());
+                    storage.Add(new StorageContainer(), "");
                 });
 
                 //assert
