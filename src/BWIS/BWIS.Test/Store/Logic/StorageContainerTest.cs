@@ -1,5 +1,6 @@
 ﻿using BWIS.Store.Contracts;
 using BWIS.Store.Logic;
+using BWIS.Store.Logic.Specialized;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
+//Notice:
+//Using objects of type "Cabinet" because "StorageContainer"
+//is abstract and could not be tested otherwise
+
 namespace BWIS.Test.Store.Logic
 {
-    public static class StorageItemContainer
+    public static class StorageContainerTest
     {
         [Fact]
         public static void IsImplemented() 
@@ -20,7 +25,7 @@ namespace BWIS.Test.Store.Logic
             //act
             var exception = Record.Exception(() => 
             {
-                item = new StorageContainer();
+                item = new Cabinet();
             });
 
             //assert
@@ -33,7 +38,8 @@ namespace BWIS.Test.Store.Logic
             public static void IsImplemented() 
             {
                 //arrange
-                IStorageContainer item = new StorageContainer();
+                IStorageContainer item = new Cabinet();
+
 
                 //act
                 var exception = Record.Exception(() => 
@@ -49,9 +55,11 @@ namespace BWIS.Test.Store.Logic
             public static void GetsCorrectValue_WhenExpectedValuesAreSet()
             {
                 //arrange
-                IStorageContainer item = new StorageContainer();
-                item.Price = 2.50;
-                item.Ammount = 3;
+                IStorageContainer item = new Cabinet
+                {
+                    Price = 2.50,
+                    Ammount = 3
+                };
 
                 double expectation = 7.50;
 
@@ -66,9 +74,11 @@ namespace BWIS.Test.Store.Logic
             public static void GetsCorrectValue_WhenAmmountIsZero()
             {
                 //arrange
-                IStorageContainer item = new StorageContainer();
-                item.Price = 2.50;
-                item.Ammount = 0;
+                IStorageContainer item = new Cabinet
+                {
+                    Price = 2.50,
+                    Ammount = 0
+                };
 
                 double expectation = 0.0;
 
@@ -83,9 +93,11 @@ namespace BWIS.Test.Store.Logic
             public static void GetsCorrectValue_WhenPriceIsZero()
             {
                 //arrange
-                IStorageContainer item = new StorageContainer();
-                item.Price = 0;
-                item.Ammount = 3;
+                IStorageContainer item = new Cabinet
+                {
+                    Price = 0,
+                    Ammount = 3
+                };
 
                 double expectation = 0.0;
 
@@ -96,58 +108,78 @@ namespace BWIS.Test.Store.Logic
                 Assert.Equal(expectation, result);
             }
         }
-        
-        public static class Add 
+
+        public static class Name 
         {
             [Fact]
-            public static void IsImplementedWithId() 
+            public static void IsImplemented()
             {
                 //arrange
-                IStorageContainer item = new StorageContainer();
+                IStorageContainer item = new Cabinet();
 
-                //act
-                var exception = Record.Exception(() => 
-                {
-                    item.Add(new StorageContainer());
-                });
-
-                //assert
-                Assert.IsNotType<NotImplementedException>(exception);
-            }
-        }
-
-        public static class Get 
-        {
-            [Fact]
-            public static void IsImplementedWithId() 
-            {
-                //arrange
-                IStorageContainer item = new StorageContainer();
-
-                //act
-                var exception = Record.Exception(() => 
-                {
-                    item.Get(0);
-                });
-
-                //assert
-                Assert.IsNotType<NotImplementedException>(exception);
-            }
-
-            [Fact]
-            public static void IsImplementedWithName()
-            {
-                //arrange
-                IStorageContainer item = new StorageContainer();
 
                 //act
                 var exception = Record.Exception(() =>
                 {
-                    item.Get("");
+                    item.Name = "Cabinet A";
+                    string name = item.Name;
                 });
 
                 //assert
                 Assert.IsNotType<NotImplementedException>(exception);
+            }
+
+            [Fact]
+            public static void ThrowsFormatException_WhenLengthLessThen3()
+            {
+                //arrange
+                IStorageContainer item = new Cabinet();
+
+                //act
+                Action action = new (() =>
+                {
+                    item.Name = "A";
+                });
+
+                //assert
+                Assert.Throws<FormatException>(action);
+            }
+        }
+
+        public static class Storage
+        {
+            [Fact]
+            public static void IsImplemented()
+            {
+                //arrange
+                IStorageContainer item = new Cabinet();
+
+
+                //act
+                var exception = Record.Exception(() =>
+                {
+                    item.Storage = "Storage A";
+                    string storage = item.Storage;
+                });
+
+                //assert
+                Assert.IsNotType<NotImplementedException>(exception);
+            }
+
+            [Fact]
+            public static void ThrowsFormatException_WhenLengthLessThen3()
+            {
+                //arrange
+                IStorageContainer item = new Cabinet();
+
+                //act
+                Action action = new(() =>
+                {
+                    item.Storage = "A";
+                });
+
+                //assert
+                Assert.Throws<FormatException>(action);
             }
         }
     }

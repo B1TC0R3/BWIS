@@ -1,5 +1,6 @@
 ﻿using BWIS.Store.Contracts;
 using BWIS.Store.Logic;
+using BWIS.Store.Logic.Specialized;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace BWIS.Test.Store.Logic
                 //act
                 var exception = Record.Exception(() => 
                 {
-                    storage.Add(new StorageContainer(), "");
+                    storage.Add(new Cabinet(), "");
                 });
 
                 //assert
@@ -73,7 +74,7 @@ namespace BWIS.Test.Store.Logic
                 //act
                 var exception = Record.Exception(() =>
                 {
-                    storage.Remove(new StorageContainer());
+                    storage.Remove(new Cabinet());
                 });
 
                 //assert
@@ -92,7 +93,7 @@ namespace BWIS.Test.Store.Logic
                 //act
                 var exception = Record.Exception(() =>
                 {
-                    storage.Replace(0, new StorageContainer());
+                    storage.Replace(0, new Cabinet());
                 });
 
                 //assert
@@ -108,7 +109,7 @@ namespace BWIS.Test.Store.Logic
                 //act
                 var exception = Record.Exception(() =>
                 {
-                    storage.Replace("", new StorageContainer());
+                    storage.Replace("", new Cabinet());
                 });
 
                 //assert
