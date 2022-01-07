@@ -61,17 +61,12 @@ namespace BWIS.Store.Logic
             cabinets.Add(cabinet);
         }
 
-        public void Remove(int id)
+        public void Remove(string id)
         {
             throw new NotImplementedException();
         }
 
         public void Remove(IStorageContainer item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Remove(string name)
         {
             throw new NotImplementedException();
         }

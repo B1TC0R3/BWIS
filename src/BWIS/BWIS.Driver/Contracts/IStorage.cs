@@ -17,11 +17,9 @@ namespace BWIS.Store.Contracts
                  DateTime expirationDate = new DateTime(),
                  double price = 0.0);
 
-        void Remove(int id);
+        void Remove(string id);
 
         void Remove(IStorageContainer item);
-
-        void Remove(string name);
 
         void Replace(int id, IStorageContainer newItem);
 
