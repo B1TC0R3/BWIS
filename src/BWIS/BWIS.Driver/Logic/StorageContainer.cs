@@ -10,9 +10,34 @@ namespace BWIS.Store.Logic
     public abstract class StorageContainer : IStorageContainer
     {
         internal List<IStorageContainer> StorageElements { get; set; }
-        public string Name { get; set; }
+        
+        private string _name;
+        public string Name 
+        {
+            get => _name;
+            set 
+            {
+                if (value.Length < 3)
+                    throw new FormatException("The name of an item must at least be 3 characters long.");
+
+                _name = value;
+            }
+        }
+        
+        private string _storage;
+        public string Storage 
+        {
+            get => _storage;
+            set
+            {
+                if (value.Length < 3)
+                    throw new FormatException("The storage name of an item must at least be 3 characters long.");
+
+                _storage = value;
+            }
+        }
+
         public string Description { get; set; }
-        public string Storage { get; set; }
         public string Unit { get; set; }
         public int Ammount { get; set; }
         public int AmmountToReorder { get; set; }
