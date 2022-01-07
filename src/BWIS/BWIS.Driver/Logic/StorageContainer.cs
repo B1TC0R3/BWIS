@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BWIS.Store.Logic
 {
-    public class StorageContainer : IStorageContainer
+    public abstract class StorageContainer : IStorageContainer
     {
         internal List<IStorageContainer> StorageElements { get; set; }
         public string Name { get; set; }
@@ -39,19 +39,10 @@ namespace BWIS.Store.Logic
             } 
         }
 
-        public void Add(IStorageContainer item)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void Add(IStorageContainer item);
 
-        public IStorageContainer Get(int id)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract IStorageContainer Get(int id);
 
-        public IStorageContainer Get(string name)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract IStorageContainer Get(string name);
     }
 }
